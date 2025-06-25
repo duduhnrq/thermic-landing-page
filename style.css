@@ -52,3 +52,7 @@
     transition: all .3s ease-in-out;
     width: 140px;
 }
+
+.display-4 {
+    font-weight: 400;
+}
