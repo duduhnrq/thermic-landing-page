@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Thermic | Garrafas Térmicas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg bg-light position-fixed w-100 py-3 z-index-1000">
+    <nav class="navbar navbar-expand-lg bg-light position-fixed w-100 py-3 z-3" id="navbar">
         <div class="nav-bar container-fluid w-75">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="assets/thermic-logo.png" alt="Thermic Logo">
@@ -34,7 +35,7 @@
                         <a class="nav-link" href="#contato">Contato</a>
                     </li>
                     <li class="nav-item m-auto">
-                        <a class="btn btn-dark shadow shadow-1 buy-btn" href="#">Comprar</a>
+                        <a class="btn btn-dark shadow shadow-1 buy-btn" href="#produtos">Comprar</a>
                     </li>
                 </ul>
             </div>
@@ -79,7 +80,7 @@
             <h2 class="text-center mb-5">Nossos Produtos</h2>
             <div class="row h-auto cards">
                 <div class="col-md-4">
-                    <div class="card mb-4 h-100">
+                    <div class="card mb-4 h-100 shadow">
                         <img src="assets/garrafa001.png" alt="Garrafa Térmica 1" class="card-img-top">
                         <div class="card-body d-flex flex-column justify-content-between">
                             <h5 class="card-title">Thermic Original</h5>
@@ -124,7 +125,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card mb-4 h-100">
+                    <div class="card mb-4 h-100 shadow">
                         <img src="assets/garrafa002.png" alt="Garrafa Térmica 2" class="card-img-top">
                         <div class="card-body d-flex flex-column justify-content-between">
                             <h5 class="card-title">Thermic Slim</h5>
@@ -169,7 +170,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card mb-4 h-100">
+                    <div class="card mb-4 h-100 shadow">
                         <img src="assets/garrafa003.png" alt="Garrafa Térmica 3" class="card-img-top">
                         <div class="card-body d-flex flex-column justify-content-between">
                             <h5 class="card-title">Thermic Pro</h5>
@@ -216,7 +217,7 @@
             </div>
             <div class="features container d-flex justify-content-center gap-5 mt-5">
                 <div class="text-center">
-                    <img src="assets/floco-de-neve.png" alt="Floco de Neve" class="img-fluid mx-auto d-block mb-4 feature-icon" style="width: 50px;">
+                    <img src="assets/floco-de-neve.png" alt="Floco de Neve" class="img-fluid mx-auto d-block mb-4 feature-icon z-index-0" style="width: 50px;">
                     <h4>Temperatura na medida</h4>
                     <p class="lead-2">Mantém sua bebida quente por até 12h ou gelada por 24h.</p>
                 </div>
@@ -237,14 +238,57 @@
     </section>
 
     <section id="sobre">
-        <div class="about container-fluid d-flex align-items-center justify-content-center p-0 mt-5">
-            <div class="about-content container w-50 p-5">
-                <h2>Sobre Nós</h2>
-                <p class="lead-2">Na Thermic, oferecemos garrafas térmicas de alta qualidade, projetadas para manter suas bebidas na temperatura ideal por mais tempo. Nossa missão é proporcionar praticidade e estilo para o seu dia a dia.</p>
-                <button type="button" class="btn btn-dark shadow">Saiba Mais</button>
+        <div class="about container d-flex align-items-center justify-content-center p-0 mt-5">
+            <div class="about-content container w-50">
+                <h2 class="text-md-start text-center mb-4 w-100">Sobre Nós</h2>
+                <p class="lead-2 mb-4">Na Thermic, oferecemos garrafas térmicas de alta qualidade, projetadas para manter suas bebidas na temperatura ideal por mais tempo. Nossa missão é proporcionar praticidade e estilo para o seu dia a dia.</p>
+                <a href="#" class="btn btn-dark shadow">Saiba Mais</a>
             </div>
             <div class="about-image container w-50 p-0">
-                <img src="assets/sobre-nos.png" alt="Sobre Nós" class="img-fluid">
+                <img src="assets/sobre-nos.png" alt="Sobre Nós" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="pt-5">
+        <div class="container">
+            <div class="row align-items-stretch">
+                <!-- Formulário à esquerda -->
+                <div class="col-md-6 mb-4 mb-md-0 d-flex align-items-center">
+                    <form class="rounded bg-white border p-4 w-100 shadow" action="#" method="post">
+                        <div class="d-flex justify-content-between gap-3">
+                            <div class="mb-3 w-50">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                            </div>
+                            <div class="mb-3 w-50">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark shadow w-100">Enviar</button>
+                    </form>
+                </div>
+                <!-- Informações à direita -->
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-start ps-md-5">
+                    <h2 class="text-md-start text-center mb-4 w-100">Fale Conosco</h2>
+                    <ul class="list-unstyled fs-5 mb-3 w-100">
+                        <li class="mb-2"><p class="lead-2"><span class="strong">E-mail:</span> contato@thermic.com.br</p></li>
+                        <li class="mb-2"><p class="lead-2"><span class="strong">Telefone:</span> (11) 99999-9999</p></li>
+                        <li class="mb-2"><p class="lead-2"><span class="strong">WhatsApp:</span> (11) 98888-8888</p></li>
+                        <li class="mb-2"><p class="lead-2"><span class="strong">Endereço:</span> Av. das Garrafas, 1234 – São Paulo/SP</p></li>
+                        <li class="mb-2"><p class="lead-2"><span class="strong">Atendimento:</span> Seg a Sex, 9h às 18h</p></li>
+                    </ul>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-dark fs-4" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-dark fs-4" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-dark fs-4" title="Twitter"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

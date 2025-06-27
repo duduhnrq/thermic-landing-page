@@ -90,30 +90,62 @@
     font-weight: 300;
 }
 
+#sobre {
+    scroll-margin-top: 90px;
+}
+
+#contato .form-label {
+    font-weight: 500;
+    color: #212529;
+}
+
+#contato .form-control {
+    font-size: 1rem;
+    background: #f8f9fa;
+    transition: all .3s ease-in-out;
+}
+
+#contato .form-control:focus {
+    border-color: #212529;
+    box-shadow: 0 0 0 2px rgba(33, 37, 41, 0.08);
+    background: #f3f3f3;
+}
+
+.strong {
+    font-weight: 500;
+}
+
 @media (max-width: 992px) {
     .nav-bar {
         width: 100% !important;
     }
 
+    .carousel {
+        padding-top: 2rem;
+    }
+
     .buy-btn {
         margin-bottom: 10px;
     }
+    
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-content,
+    .about-image {
+        width: 100% !important;
+        padding: 12px !important;
+    }
+}
 
+@media (max-width: 768px) {
     .cards {
         gap: 1rem
     }
 
     .features {
         flex-direction: column;
-    }
-
-    .about {
-        flex-direction: column;
-    }
-
-    .about-content,
-    .about-image {
-        width: 100% !important;
-        padding: 12px !important;
     }
 }
