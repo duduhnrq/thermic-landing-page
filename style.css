@@ -127,16 +127,60 @@
     .buy-btn {
         margin-bottom: 10px;
     }
+
+    .modal-body {
+        flex-direction: column;
+    }
+
+    .modal-body img {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    #sobre hr {
+        display: block !important;
+    }
     
     .about {
         flex-direction: column;
-        text-align: center;
+        text-align: center !important;
+        margin-top: 0 !important;
+    }
+
+    .about-content h2 {
+        text-align: center !important;
     }
     
     .about-content,
     .about-image {
         width: 100% !important;
         padding: 12px !important;
+    }
+
+    #contato hr {
+        display: block !important;
+    }
+
+    .contact {
+        margin-top: 0 !important;
+    }
+
+    .contact-container {
+        flex-direction: column-reverse;
+    }
+
+    .contact-content {
+        width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .text-md-start {
+        text-align: center !important;
+    }
+
+    .social-icons {
+        margin-bottom: 2rem;
     }
 }
 
