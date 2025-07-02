@@ -31,6 +31,10 @@ Landing page responsiva e moderna para a marca fictícia **Thermic**, especialis
    ```
 3. **Abra o arquivo *index.html* no seu navegador.**
 
+## 🖥️ Live Demo
+
+[Thermic | Garrafas Térmicas](https://duduhnrq.github.io/thermic-landing-page/)
+
 ## 📁 Estrutura de arquivos
   ```bash
   thermic-landing-page/
